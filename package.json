@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend JobsCE",
+  "author": "João Neto",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-rc18",
+    "@nuxtjs/axios": "^5.3.6",
+    "bootstrap-vue": "^2.1.0",
+    "holderjs": "^2.9.6",
+    "install": "^0.13.0",
+    "jquery-slim": "^3.0.0",
+    "moment": "^2.24.0",
+    "npm": "^6.13.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
+  }
+}

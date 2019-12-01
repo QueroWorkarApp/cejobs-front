@@ -1,0 +1,35 @@
+query Jobs {
+  jobareas {
+      id
+      AreaName 
+  }
+  jobs {
+    id
+    title
+    description
+    Published
+    JobType
+    Salary
+    ApplyEmail
+    ApplyWebsite
+    company {
+      id
+      Title
+      Address
+      Website
+      Logo {
+        url
+      }
+    }
+    jobareas {
+      id
+      AreaName
+    }
+    languages {
+      id
+      LangName
+    }
+    createdAt
+    updatedAt
+  }
+}
