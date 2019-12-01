@@ -1,0 +1,5 @@
+{
+  "env": {
+    "BACKEND_URL": "https://cejobs-backend.herokuapp.com/graphql"
+  }
+}
