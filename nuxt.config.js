@@ -1,7 +1,7 @@
 export default {
   modules: [
     'bootstrap-vue/nuxt',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
   ],
 
   css: [
@@ -44,7 +44,7 @@ export default {
     // required
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1338/graphql',
+        httpEndpoint: 'https://cejobs-backend.herokuapp.com/graphql',
         httpLinkOptions: {
           credentials: 'same-origin'
         },

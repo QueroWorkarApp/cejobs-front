@@ -18,11 +18,9 @@
     "install": "^0.13.0",
     "jquery-slim": "^3.0.0",
     "moment": "^2.24.0",
-    "npm": "^6.13.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0"
   }
