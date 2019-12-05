@@ -1,30 +1,31 @@
 <template>
-  <div>
-    
-    <cejobs-welcome-message />
+  <div class="container">
+    <div class="row justify-content-center d-flex">
+      <site-sidebar />
 
-    <job-list :title="'Vagas mais recentes'" :jobs="jobs" />
-
-    <company-list />
-    
+      <div class="col-lg-8 post-list">
+        <job v-for="job in jobs" v-bind:key="job.id" :job="job" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import WelcomeMessage from  "../components/messages/WelcomeMessage";
-import CompactList    from  "../components/joblists/CompactList";
-import CompanyList    from  "../components/joblists/CompanyList";
+import WelcomeMessage from "../components/messages/WelcomeMessage";
+import JobSingle from "../components/joblists/Job";
+import CompanyList from "../components/joblists/CompanyList";
 
-import jobsQuery      from "../queries/jobs.gql";
+import jobsQuery from "../queries/jobs.gql";
 
+import SiteSidebar from "../layouts/sidebar";
 
 export default {
-    data () {
-      return {
-        // 3
-        jobs: [],
-      }
-    },
+  data() {
+    return {
+      // 3
+      jobs: []
+    };
+  },
 
   apollo: {
     jobs: {
@@ -34,11 +35,12 @@ export default {
   },
 
   components: {
-    'cejobs-welcome-message': WelcomeMessage,
-    'job-list': CompactList,
-    'company-list': CompanyList
-  },
+    "cejobs-welcome-message": WelcomeMessage,
+    "job": JobSingle,
+    "company-list": CompanyList,
+    "site-sidebar": SiteSidebar
 
+  }
 };
 </script>
 

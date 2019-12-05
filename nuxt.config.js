@@ -44,6 +44,7 @@ export default {
     // required
     clientConfigs: {
       default: {
+        //httpEndpoint: 'http://localhost:1338/graphql',
         httpEndpoint: 'https://cejobs-backend.herokuapp.com/graphql',
         httpLinkOptions: {
           credentials: 'same-origin'
