@@ -35,53 +35,7 @@
       </ul>
     </div>
 
-    <div class="single-widget category-widget">
-      <h4 class="title">Tipo de Job</h4>
-      <ul>
-        <li>
-          <a href="#" class="justify-content-between align-items-center d-flex">
-            <h6>Techlology</h6>
-            <span>37</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="justify-content-between align-items-center d-flex">
-            <h6>Lifestyle</h6>
-            <span>24</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="justify-content-between align-items-center d-flex">
-            <h6>Fashion</h6>
-            <span>59</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="justify-content-between align-items-center d-flex">
-            <h6>Art</h6>
-            <span>29</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="justify-content-between align-items-center d-flex">
-            <h6>Food</h6>
-            <span>15</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="justify-content-between align-items-center d-flex">
-            <h6>Architecture</h6>
-            <span>09</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="justify-content-between align-items-center d-flex">
-            <h6>Adventure</h6>
-            <span>44</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <widget-job-types />
 
     <div class="single-widget recent-posts-widget">
       <h4 class="title">Vagas recentes</h4>
@@ -181,7 +135,14 @@
 </template>
 
 <script>
-export default {};
+
+import JobTypes from '../components/widgets/JobTypes';
+
+export default {
+  components: {
+    'widget-job-types': JobTypes
+  }
+};
 </script>
 
 <style>

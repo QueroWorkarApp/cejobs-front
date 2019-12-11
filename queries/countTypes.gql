@@ -1,0 +1,18 @@
+query countTypes {
+  jobsConnection {
+    groupBy {
+        JobType {
+        key,
+        connection {
+            aggregate {
+            count
+            }
+        }
+        }
+    }
+
+    aggregate {
+        count
+    }
+  }
+}
