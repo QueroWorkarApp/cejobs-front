@@ -4,7 +4,7 @@
       <div class="row align-items-center justify-content-between d-flex">
         <div id="logo">
           <nuxt-link :to="'/'">
-            <h2>>_CeJOBS</h2>
+            <h2> QueroWorkar.App </h2>
           </nuxt-link>
         </div>
         <nav id="nav-menu-container">
