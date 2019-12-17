@@ -8,6 +8,8 @@
 
 @import "bootstrap/mixins/breakpoints";
 
+// Custom Fonts
+@import "theme/fonts";
 
 // including variables and mixins
 @import "theme/variables";
@@ -15,8 +17,7 @@
 @import "theme/flexbox";
 @import "theme/reset";
 
-
-// Custom Scss 
+// Custom Scss
 @import "theme/elements";
 @import "theme/header";
 @import "theme/home";

@@ -1,5 +1,5 @@
 <template>
-  <div class="single-widget category-widget">
+  <div class="single-widget category-widget custom-card">
     <h4 class="title">Tipo de Job</h4>
     <ul>
       <li v-for="typeCount in jobTypesCount" v-bind:key="typeCount.key">
@@ -27,7 +27,7 @@ export default {
   apollo: {
     jobTypesCount: {
       query: jobTypesCountQuery,
-      update: data => { 
+      update: data => {
           return data.jobsConnection.groupBy.JobType.map(( line ) => {
               const e = {
                   'key': line.key,

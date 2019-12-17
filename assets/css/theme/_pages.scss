@@ -1,3 +1,50 @@
+// Global classes
+
+.job-card {
+  padding:30px;
+  border:1px solid #eee;
+  border-left: 4px solid $primary-color;
+  border-radius:4px;
+  box-shadow: 0 1px 2px rgba(#000,0.1);
+  margin-bottom:30px;
+}
+
+.custom-card {
+  padding: 40px 30px !important;
+  border:1px solid #eee !important;
+  border-radius:4px !important;
+  box-shadow: 0 1px 2px rgba(#000,0.1) !important;
+  margin-bottom:30px !important;
+}
+
+.label-tag {
+  margin-bottom:5px;
+  display:inline-block;
+  padding:2px 8px;
+  line-height: 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  cursor: pointer;
+  border:1px solid $primary-color;
+  background-color: $white;
+  @include transition();
+  a{
+    color:$primary-color !important;
+    @include transition();
+  }
+  &:hover{
+    border:1px solid $primary-color !important;
+    background-color:$primary-color !important;
+    a{
+      color:$white !important;
+    }
+  }
+}
+
 // ============= Start Aboutus Page Styles  =============  //
 
 
@@ -8,7 +55,7 @@
 }
 
 .about-content{
-	padding: 150px 0px;	
+	padding: 150px 0px;
 	text-align:center;
 	h1{
 		font-size: 48px;
@@ -22,7 +69,7 @@
 	.lnr{
 		margin:0px 10px;
 		font-weight:600;
-	}	
+	}
 }
 
 //--------- End Aboutus Area style -------------//
@@ -84,7 +131,7 @@
 		text-align:center;
 		h1{
 			margin-bottom:20px;
-		}	
+		}
 	}
 }
 
@@ -120,7 +167,7 @@
 
 //--------- start team Area -------------//
 
-.team-area{	
+.team-area{
 	.single-team{
 
 	}
@@ -240,13 +287,13 @@
 		padding: 30px 0px;
 		h4{
 			font-weight:500;
-		} 		
+		}
 	}
 	.price-bottom{
 		background-color:$offwhite;
 		margin: 0 45px 45px 45px;
 		padding: 35px;
-		@include transition();		
+		@include transition();
 		h1{
 			font-size: 60px;
 			font-weight: 300;
@@ -261,7 +308,7 @@
 			text-align:left;
 			margin-top:15px;
 			margin-left:10px;
-		}		
+		}
 		.primary-btn{
 			border-radius:0;
 			margin-top:20px;
@@ -351,7 +398,7 @@
 
 .form-area{
 	input{
-		padding: 15px;		
+		padding: 15px;
 	}
 	input,textarea{
 		border-radius:0;
@@ -406,7 +453,7 @@
 //--------- Start Blog Post Area Style-------------//
 
 .blog-posts-area{
-	
+
 }
 
 .blog-post-list{
@@ -420,11 +467,10 @@
 .single-post{
 	margin-bottom:30px;
 	.tags{
-		margin-top:40px;	
 		li{
 			display:inline-block;
 			a{
-				color:$black;	
+				color:$black;
 			}
 			&:hover{
 				a{
@@ -435,7 +481,7 @@
 	}
 	h1{
 		margin-top:20px;
-		margin-bottom:20px;	
+		margin-bottom:20px;
 	}
 
 	.title{
@@ -467,7 +513,7 @@
 				&:hover{
 					color:$black;
 				}
-			}		
+			}
 			@media(max-width: 768px){
 				text-align:left;
 			}
@@ -484,12 +530,12 @@
 
 .single-widget{
 	border:1px solid #eee;
-	padding:40px 30px; 
+	padding:40px 30px;
 	margin-bottom:30px;
 	.title{
 		font-weight:600;
 		margin-bottom:30px;
-	}	
+	}
 }
 
 
@@ -525,13 +571,13 @@
 	    content: "";
 	    clear: both;
 	    display: table;
-	}	
+	}
 }
 
 .protfolio-widget{
 	text-align:center;
 	h4{
-		padding:20px 0; 
+		padding:20px 0;
 	}
 	ul li{
 		padding:15px;
@@ -544,14 +590,14 @@
 			}
 		}
 	}
-}	
+}
 
 
 .category-widget{
 	ul{
 		li{
 			border-bottom:1px solid #eee;
-			padding:10px 20px;	
+			padding:10px 20px;
 			h6{
 				font-weight:300;
 				@include transition();
@@ -567,7 +613,7 @@
 				h6,span{
 					color:$primary-color;
 				}
-			}	
+			}
 		}
 	}
 }
@@ -598,7 +644,7 @@
 
 .recent-posts-widget{
 	.single-recent-post{
-		.recent-details{			
+		.recent-details{
 			margin-left:20px;
 			h4{
 				line-height:1.5em !important;
@@ -616,7 +662,7 @@
 		}
 		@media(max-width: 960px){
 			margin-bottom:20px;
-		}		
+		}
 	}
 
 }
@@ -655,7 +701,7 @@
 		text-align:right;
 			.thumb{
 				padding-left: 20px;
-			}		
+			}
 	}
 
 	@media(max-width:768px){
@@ -697,15 +743,15 @@
 	}
 	.btn-reply{
 		background-color:$black;
-		color: $white;	
+		color: $white;
 		border:1px solid $black;
-		padding: 8px 30px;	
+		padding: 8px 30px;
 		display:block;
 		@include transition();
 		&:hover{
 			background-color:transparent;
 			color: $black;
-		}	
+		}
 	}
 }
 
@@ -732,7 +778,7 @@
 		height:90%;
 	}
 	padding-bottom:100px;
-	
+
 	.form-control{
 		border:none;
 		background:$offwhite;

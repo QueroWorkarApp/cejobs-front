@@ -1,7 +1,7 @@
 <template>
   <div class="col-lg-4 sidebar">
 
-    <div class="single-widget protfolio-widget">
+    <div class="single-widget protfolio-widget custom-card">
       <img src="img/blog/user2.jpg" alt />
       <a href="#">
         <h4>Somos um portal OpenSource</h4>
@@ -37,7 +37,7 @@
 
     <widget-job-types />
 
-    <div class="single-widget recent-posts-widget">
+    <div class="single-widget recent-posts-widget custom-card">
       <h4 class="title">Vagas recentes</h4>
       <div class="blog-list">
         <div class="single-recent-post d-flex flex-row">
@@ -99,7 +99,7 @@
       </div>
     </div>
 
-    <div class="single-widget tags-widget">
+    <div class="single-widget tags-widget custom-card">
       <h4 class="title">Linguagens</h4>
       <ul>
         <li>
