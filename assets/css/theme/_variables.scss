@@ -1,17 +1,21 @@
 
 //    Font Family
 
-$primary-font	: 'Poppins', sans-serif;
+$primary-font	: 'San Francisco', 'Poppins', sans-serif;
 
 /*--------------------------- Color variations ----------------------*/
 
-$primary-color	: #49e4fa;
+$primary-color	: #db3439;
 $title-color	: #222222;
 $text-color		: #777777;
 
 $white			: #fff;
 $offwhite		: #f9f9ff;
 $black			: #222;
+
+// Default Box-shadow
+
+$shadow : 0 1px 4px rgba(#333, 0.1);
 
 
 

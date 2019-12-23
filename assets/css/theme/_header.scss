@@ -23,19 +23,23 @@
   }
 }
 
-#header #logo h1 {
-  font-size: 34px;
+#header #logo h3 {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-weight: 600;
+  color: $white;
 }
 
-#header #logo h1 a, #header #logo h1 a:hover {
-  color: #fff;
+#header #logo a h3 {
+  color: $white;
   padding-left: 10px;
-  border-left: 4px solid $primary-color;
+  border-left: 4px solid $white;
+}
+
+#header #logo a:hover h3 {
+  color: $offwhite;
+  border-left: 4px solid $offwhite;
 }
 
 #header #logo img {
@@ -57,7 +61,7 @@
   background:$primary-color;
   color:$white;
   padding:6px 20px!important;
-  text-transform:uppercase; 
+  text-transform:uppercase;
   &:hover{
     background:rgba($primary-color,.2);
     color:$primary-color;
@@ -160,9 +164,16 @@
   display: inline-block;
   color: $white;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   outline: none;
+  position: relative;
+}
+
+.nav
+
+.nav-menu a:hover {
+  color: $offwhite;
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
@@ -222,7 +233,7 @@
 
 #mobile-nav-toggle i {
   color: $primary-color;
-  font-weight: 900;  
+  font-weight: 900;
 }
 
 @media (max-width: 960px) {

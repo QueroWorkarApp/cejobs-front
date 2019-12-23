@@ -129,7 +129,7 @@
 
 		@include media-breakpoint-down (lg) {
 			font-size:45px;
-		}	
+		}
 
 		@media ( max-width:414px ) {
 			font-size:32px;
@@ -191,7 +191,7 @@
 	border:1px solid transparent;
 	color:$black;
 	padding-left: 40px;
-	padding-right: 40px;	
+	padding-right: 40px;
 	border-radius:50px;
 	&:hover{
 		border:1px solid $white;
@@ -233,13 +233,13 @@
 		@include transition;
 	    background:$primary-color;
 	}
-	
+
 }
 
 
 	@media(max-width:960px){
 		.post-list{
-			margin-bottom:50px;	
+			margin-bottom:50px;
 		}
 	}
 
@@ -254,12 +254,12 @@
 	}
 	h4{
 		color:$white;
-	}	
+	}
 	h6{
 		padding:10px 0;
 		color:$primary-color;
 	}
-	.thumb{ 
+	.thumb{
 		display:inline-block;
 		img{
 			margin-top:10px;
@@ -318,7 +318,7 @@
 	text-align:center;
 	border-radius: 3px;
 	background-color: rgb(255, 255, 255);
-	box-shadow: 0px 0px 40px 0px rgba(132, 144, 255, 0.2);	
+	box-shadow: 0px 0px 40px 0px rgba(132, 144, 255, 0.2);
 	padding:20px 0;
 	border:1px solid transparent;
 	@include transition();
@@ -358,7 +358,7 @@
 				text-transform:uppercase;
 				font-weight:600;
 				color:$black;
-			}			
+			}
 			&:hover{
 				background-color:$primary-color;
 				a{
@@ -372,14 +372,17 @@
 				margin-bottom:10px;
 				font-size:10px;
 			}
-			
+
 		}
 	}
 
 	.single-post{
-		padding:30px;		
-		background-color:$offwhite;
-		margin-bottom:30px;
+    display: grid !important;
+    grid-template:
+      "thumb details buttons"
+      "labels labels labels"
+      / 1fr 3.5fr 1fr;
+    grid-gap: 10px;
 		h6{
 			margin-top:10px;
 			color:$black;
@@ -399,12 +402,19 @@
 			color:$black;
 			margin-bottom:15px;
 		}
-		.btns{
+    .btns{
+      grid-area: buttons;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
 			li{
 				display:inline-block;
 				background-color:$white;
-				border:1px solid #eee;
-				padding:10px 15px;
+        border:1px solid #eee;
+        border-radius: 4px;
+        padding:10px 15px;
+        height: fit-content;
+        cursor: pointer;
 				@include transition();
 				i,a{
 					text-transform:uppercase;
@@ -422,32 +432,51 @@
 				li{
 					margin-bottom:5px;
 				}
-				
+
 			}
 		}
 		.thumb{
-			.tags{
-				margin-top:30px;
-				li{
-					margin-bottom:5px;
-					display:inline-block;
-					background:$white;
-					border:1px solid #eee;
-					padding:6px 15px;
-					@include transition();
-					a{
-						color:#777777;
-						@include transition();
-					}
-					&:hover{
-						background-color:$primary-color;
-						a{
-							color:$white;
-						}
-					}
-				}
-			}
-		}
+      grid-area: thumb;
+      img {
+        border: 1px solid $offwhite;
+        border-radius: 4px;
+        box-shadow: 0 0 1px rgba(#000, 0.25);
+      }
+    }
+
+    .details {
+      grid-area: details;
+      .title {
+
+        h4 {
+          text-transform: uppercase;
+          margin-bottom: 5px;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        .titles h6 {
+          color: #777;
+          font-weight: 500;
+          margin-top: 0px;
+        }
+      }
+
+      p {
+        margin: 5px 0px;
+        font-weight: 400;
+        color: #777;
+      }
+    }
+
+    .labels {
+      grid-area: labels;
+      .tags{
+        display: flex;
+        flex-direction: row;
+      }
+    }
 	}
 
 	@media(max-width:736px){
@@ -467,7 +496,7 @@
 		.title.flex-row{
 			flex-direction: column !important;
 			display:inline-block !important;
-		} 
+		}
 		.details{
 			margin-top:30px;
 		}
@@ -554,7 +583,7 @@
 		}
 		h6{
 			font-weight:300;
-			margin-bottom:10px;	
+			margin-bottom:10px;
 		}
 		h5{
 			font-weight:300;
@@ -640,13 +669,13 @@
 		padding: 30px 0px;
 		h4{
 			font-weight:600;
-		} 		
+		}
 	}
 	.price-bottom{
 		background-color:$offwhite;
 		margin: 0 45px 45px 45px;
 		padding: 35px;
-		@include transition();		
+		@include transition();
 		h1{
 			font-size: 60px;
 			font-weight: 300;
@@ -661,7 +690,7 @@
 			text-align:left;
 			margin-top:15px;
 			margin-left:10px;
-		}		
+		}
 		.primary-btn{
 			border-radius:0;
 			margin-top:20px;
@@ -752,7 +781,7 @@
 		font-size:40px;
 		padding-right:20px;
 		color:$primary-color;
-	}	
+	}
 	&:hover{
 		cursor:pointer;
  		box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.1);
@@ -828,7 +857,7 @@
 	}
 	@media(max-width:588px){
 		padding:15px;
-	}	
+	}
 }
 
 
@@ -948,7 +977,7 @@
 				}
 			}
 		}
-		
+
 		i{
 			color:#cccccc;
 			@include transition();
@@ -982,7 +1011,7 @@
 			cursor:pointer;
 		}
 
-			
+
 		@media(max-width:960px) {
 			.nw-btn{
 				margin-top:20px;
@@ -1044,7 +1073,7 @@
 		}
 	}
 
-		
+
 	.footer-bottom{
 		padding-top:80px;
 	}
@@ -1098,7 +1127,7 @@
 
 .generic-content{
 	h1{
-		font-weight:600;	
+		font-weight:600;
 	}
 }
 

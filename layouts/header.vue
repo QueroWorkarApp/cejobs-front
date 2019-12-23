@@ -4,7 +4,7 @@
       <div class="row align-items-center justify-content-between d-flex">
         <div id="logo">
           <nuxt-link :to="'/'">
-            <h2> QueroWorkar.App </h2>
+            <h3>QueroWorkar.App</h3>
           </nuxt-link>
         </div>
         <nav id="nav-menu-container">
@@ -58,6 +58,6 @@ export default {};
 
 <style lang="scss">
 #header {
-    background:#7e64f7;
+    background:#db3439;
 }
 </style>

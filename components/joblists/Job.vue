@@ -1,42 +1,44 @@
 <template>
-  <div class="col-lg-12 single-post d-flex flex-row">
+  <div class="col-lg-12 single-post job-card">
     <div class="thumb">
       <img :src="job.company.Logo.url" alt style="width: 100px" class="mr-2 rounded" />
-      <ul class="tags">
-        <li v-for="area in job.jobareas">
-          <nuxt-link :to="link( job )">{{area.AreaName}}</nuxt-link>
-        </li>
-      </ul>
     </div>
     <div class="details">
-      <div class="title d-flex flex-row justify-content-between">
+      <div class="title">
         <div class="titles">
           <nuxt-link :to="link( job )">
             <h4>{{job.title}}</h4>
           </nuxt-link>
           <h6>{{ job.company.Title }}</h6>
         </div>
-        <ul class="btns">
-          <li>
-            <nuxt-link :to="link( job )">
-              <span class="lnr lnr-heart"></span>
-            </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link :to="link( job )">Aplicar</nuxt-link>
-          </li>
-        </ul>
       </div>
       <p>{{ job.description.slice( 0, 200 ) }}</p>
-      <h5>Tipo: {{job.JobType}}</h5>
+      <p>Tipo: {{job.JobType}}</p>
       <p class="address">
-        <span class="lnr lnr-map"></span>
+        <span class="lnr lnr-map" title="Endereço"></span>
         {{ job.company.Address }}
       </p>
       <p class="address">
         <span class="lnr lnr-database"></span>
         Faixa de salário: R$ {{ job.Salary }}
       </p>
+    </div>
+    <ul class="btns">
+      <li class="mr-2">
+        <nuxt-link :to="link( job )">
+          <span class="lnr lnr-heart"></span>
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="link( job )">Aplicar</nuxt-link>
+      </li>
+    </ul>
+    <div class="labels">
+      <ul class="tags">
+        <li class="mr-2 label-tag" v-for="(area, i) in job.jobareas" :key="i">
+          <nuxt-link :to="link( job )">{{area.AreaName}}</nuxt-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
