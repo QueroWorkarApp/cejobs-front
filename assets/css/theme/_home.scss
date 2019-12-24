@@ -477,7 +477,20 @@
         flex-direction: row;
       }
     }
-	}
+  }
+
+  @media(max-width: 575px) {
+    .single-post {
+      grid-template:
+        "thumb details"
+        "labels labels"
+        / 1fr 5fr;
+    }
+
+    .btns {
+      display: none !important;
+    }
+  }
 
 	@media(max-width:736px){
 		h4{
