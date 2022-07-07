@@ -17,7 +17,7 @@
     "holderjs": "^2.9.6",
     "install": "^0.13.0",
     "jquery-slim": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
